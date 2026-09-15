@@ -1,60 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
+const typingText = document.getElementById("typing-text");
 
-    const typingText = document.getElementById("typing-text");
+const texts = [
+    "I'm a Computer Science Student.",
+    "I love Ice Cream.",
+];
 
-    if (typingText) {
+let textIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-        const texts = [
-            "I'm a Computer Science Student.",
-            "i love ice cream.",
-        ];
+function typeEffect() {
+    const currentText = texts[textIndex];
 
-        let textIndex = 0;
-        let charIndex = 0;
-        let deleting = false;
+    if (!deleting) {
+        typingText.textContent = currentText.slice(0, charIndex + 1);
+        charIndex++;
 
-        function type() {
-
-            const currentText = texts[textIndex];
-
-            if (!deleting) {
-                typingText.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-
-                if (charIndex === currentText.length) {
-                    deleting = true;
-
-                    setTimeout(type, 1500);
-                    return;
-                }
-
-            } else {
-                typingText.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-
-                if (charIndex === 0) {
-                    deleting = false;
-                    textIndex = (textIndex + 1) % texts.length;
-
-                    setTimeout(type, 500);
-                    return;
-                }
-            }
-
-            setTimeout(type, deleting ? 50 : 100);
+        if (charIndex === currentText.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
         }
+    } else {
+        typingText.textContent = currentText.slice(0, charIndex - 1);
+        charIndex--;
 
-        type();
-    }
-     // Mobile menu
-    const menuButton = document.getElementById("menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    if (menuButton && mobileMenu) {
-        menuButton.addEventListener("click", function () {
-            mobileMenu.classList.toggle("hidden");
-        });
+        if (charIndex === 0) {
+            deleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
     }
 
+    setTimeout(typeEffect, deleting ? 50 : 90);
+}
 
+typeEffect();
+
+
+/* Mobile Navbar */
+const menuButton = document.getElementById("menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
 });
