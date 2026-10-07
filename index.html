@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dinda | Personal Portfolio</title>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,37 +18,20 @@
 <body class="bg-white text-[#2B1620] font-['Plus_Jakarta_Sans']">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-pink-100">
-        <div class="max-w-6xl mx-auto px-6 py-4">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
 
-            <div class="flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="h-20 flex items-center justify-between">
 
                 <!-- Logo -->
                 <a href="index.html"
-                   class="text-xl font-bold text-pink-500">
-                    Dinda.
+                   class="text-xl font-bold tracking-tight text-[#2B1620]">
+                    Dinda<span class="text-pink-500">.</span>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                     <a href="index.html" class="text-pink-500">Home</a>
-                    <a href="about.html" class="text-gray-500 hover:text-pink-500 transition">About</a>
-                    <a href="experience.html" class="text-gray-500 hover:text-pink-500 transition">Experience</a>
-                    <a href="achievements.html" class="text-gray-500 hover:text-pink-500 transition">Achievements</a>
-                </div>
-                <!-- Mobile Menu Button -->
-                <button
-                    id="menu-button"
-                    class="md:hidden text-pink-500 text-2xl"
-                    aria-label="Open menu">
-                    ☰
-                </button>
-            </div>
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu"
-                 class="hidden md:hidden pt-4 pb-2">
-
-                <div class="flex flex-col gap-4 text-sm font-medium">
+                <div class="hidden md:flex items-center gap-9 text-sm font-medium">
 
                     <a href="index.html"
                        class="text-pink-500">
@@ -53,83 +39,142 @@
                     </a>
 
                     <a href="about.html"
-                       class="text-gray-500 hover:text-pink-500">
+                       class="text-gray-500 hover:text-pink-500 transition">
                         About
                     </a>
-                      <a href="experience.html"
-                       class="text-gray-500 hover:text-pink-500">
+
+                    <a href="experience.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
                         Experience
                     </a>
 
                     <a href="achievements.html"
-                       class="text-gray-500 hover:text-pink-500">
+                       class="text-gray-500 hover:text-pink-500 transition">
                         Achievements
                     </a>
+
+                </div>
+
+                <!-- Mobile Button -->
+                <button
+                    id="menu-button"
+                    type="button"
+                    class="md:hidden text-gray-700 text-2xl"
+                    aria-label="Open menu"
+                    aria-expanded="false">
+                    ☰
+                </button>
+
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu"
+                 class="hidden md:hidden border-t border-gray-100 py-5">
+
+                <div class="flex flex-col gap-5 text-sm font-medium">
+
+                    <a href="index.html"
+                       class="text-pink-500">
+                        Home
+                    </a>
+
+                    <a href="about.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        About
+                    </a>
+
+                    <a href="experience.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Experience
+                    </a>
+
+                    <a href="achievements.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Achievements
+                    </a>
+
                 </div>
             </div>
+
         </div>
     </nav>
 
 
     <!-- Hero -->
-    <main class="min-h-screen pt-28 pb-12 flex items-center">
-        <div class="max-w-6xl mx-auto px-6 w-full">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-                <!-- Text -->
-                <div class="text-center md:text-left">
+    <main class="pt-20">
 
-                    <p class="text-pink-500 text-lg font-medium mb-3">
-                        Hello!
-                    </p>
+        <section class="min-h-[calc(100vh-5rem)] flex items-center">
 
-                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-                        I'm Dinda.
-                    </h1>
+            <div class="max-w-6xl mx-auto px-6 w-full py-16">
 
-                    <!-- Typing Effect -->
-                    <div class="mt-5 min-h-[40px]">
-                        <span id="typing-text"
-                              class="text-xl sm:text-2xl font-semibold text-pink-500">
-                        </span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-14 lg:gap-24 items-center">
 
-                        <span class="text-pink-400 animate-pulse">
-                            |
-                        </span>
-                    </div>
+                    <!-- Text -->
+                    <div class="order-2 md:order-1 text-center md:text-left">
 
-                    <p class="mt-6 text-gray-500 leading-8 max-w-xl mx-auto md:mx-0">
-                        Welcome to my personal portofolio. Here you can learn more about me, my experiences, and the achievements
-                        I have gained throughout my journey.
-                    </p>
+                        <p class="text-sm uppercase tracking-[0.25em] text-pink-500 font-semibold mb-5">
+                            Welcome to my portfolio
+                        </p>
 
-                    <!-- Button -->
-                    <div class="mt-8">
-                        <a href="about.html"
-                           class="inline-block px-7 py-3 rounded-full bg-pink-500 text-white font-medium hover:bg-pink-600 transition duration-300">
-                            More About Me
-                        </a>
-                    </div>
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+                            Hello,<br>
+                            I'm <span class="text-pink-500">Dinda.</span>
+                        </h1>
 
-                </div>
+                        <!-- Typing -->
+                        <div class="mt-6 h-9">
 
+                            <span id="typing-text"
+                                  class="text-xl sm:text-2xl font-semibold text-gray-700">
+                            </span>
 
-                <!-- Photo -->
-                <div class="flex justify-center md:justify-end">
+                            <span class="text-pink-400 animate-pulse">
+                                |
+                            </span>
 
-                    <div class="relative">
-
-                        <!-- Decoration -->
-                        <div class="absolute inset-0 bg-pink-100 rounded-[2rem] rotate-6">
                         </div>
 
-                        <!-- Image -->
-                        <div class="relative bg-pink-50 p-3 rounded-[2rem] shadow-lg shadow-pink-100">
+                        <p class="mt-7 max-w-xl mx-auto md:mx-0 text-gray-500 leading-8">
+                            A Computer Science student who enjoys exploring technology,
+                            creating digital projects, and gaining new experiences.
+                        </p>
 
-                            <img
-                                src="assets/dinda.jpeg"
-                                alt="Dinda"
-                                class="w-64 h-80 sm:w-72 sm:h-96 object-cover rounded-[1.5rem]"
-                            >
+                        <!-- Buttons -->
+                        <div class="mt-9 flex flex-wrap justify-center md:justify-start gap-4">
+
+                            <a href="about.html"
+                               class="px-7 py-3.5 rounded-full bg-[#2B1620] text-white text-sm font-medium hover:bg-pink-500 transition duration-300">
+                                More About Me
+                            </a>
+
+                            <a href="experience.html"
+                               class="px-7 py-3.5 rounded-full border border-gray-200 text-gray-700 text-sm font-medium hover:border-pink-300 hover:text-pink-500 transition duration-300">
+                                View Experience
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Image -->
+                    <div class="order-1 md:order-2 flex justify-center md:justify-end">
+
+                        <div class="relative">
+
+                            <!-- Soft decoration -->
+                            <div class="absolute -top-5 -right-5 w-full h-full rounded-[2.5rem] bg-pink-100">
+                            </div>
+
+                            <div class="relative bg-white p-3 rounded-[2.5rem] shadow-xl shadow-gray-200/70">
+
+                                <img
+                                    src="assets/dinda.jpeg"
+                                    alt="Dinda"
+                                    class="w-64 h-80 sm:w-72 sm:h-96 object-cover rounded-[2rem]"
+                                >
+
+                            </div>
 
                         </div>
 
@@ -139,38 +184,58 @@
 
             </div>
 
-        </div>
+        </section>
+
+
+        <!-- Intro -->
+        <section class="border-y border-gray-100 bg-[#fafafa]">
+
+            <div class="max-w-6xl mx-auto px-6 py-20">
+
+                <div class="grid md:grid-cols-3 gap-10 items-start">
+
+                    <div>
+                        <p class="text-sm uppercase tracking-[0.2em] text-pink-500 font-semibold">
+                            About Me
+                        </p>
+
+                        <h2 class="text-3xl sm:text-4xl font-bold mt-3">
+                            A little about me.
+                        </h2>
+                    </div>
+
+                    <div class="md:col-span-2">
+
+                        <p class="text-gray-500 leading-8">
+                            I am a Computer Science student who enjoys learning
+                            new things, exploring technology, and gaining new
+                            experiences. I am interested in web development,
+                            design, and organizational activities.
+                        </p>
+
+                        <a href="about.html"
+                           class="inline-flex items-center mt-6 text-sm font-semibold text-pink-500 hover:text-pink-600 transition">
+                            Learn more about me
+                            <span class="ml-2">→</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <!-- Introduction -->
-    <section class="bg-pink-50 py-20">
-
-        <div class="max-w-4xl mx-auto px-6 text-center">
-
-            <p class="text-pink-500 font-medium mb-3">
-                Welcome to my portofolio
-            </p>
-
-            <h2 class="text-3xl sm:text-4xl font-bold">
-                A Little About Me
-            </h2>
-
-            <p class="mt-5 text-gray-500 leading-8">
-                I am a Computers Science student who enjoys learning new things, exploring technology, and gaining new experiences.
-                I believe that every experience is an opportunity to grow and develop new skills.
-            </p>
-        </div>
-    </section>
-
-
     <!-- Footer -->
-    <footer class="border-t border-pink-100 py-6">
+    <footer class="border-t border-gray-100">
 
-        <div class="max-w-6xl mx-auto px-6 text-center">
+        <div class="max-w-6xl mx-auto px-6 py-7">
 
-            <p class="text-sm text-gray-400">
+            <p class="text-center text-sm text-gray-400">
                 © 2026 Made Dinda Dwi Marta. All rights reserved.
             </p>
 

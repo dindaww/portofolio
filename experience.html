@@ -6,8 +6,10 @@
 
     <title>Experience | Dinda</title>
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,169 +18,264 @@
 <body class="bg-white text-[#2B1620] font-['Plus_Jakarta_Sans']">
 
     <!-- Navbar -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-pink-100">
-    <div class="max-w-6xl mx-auto px-6 py-4">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
 
-        <div class="flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6">
 
-            <!-- Logo -->
-            <a href="index.html"
-               class="text-xl font-bold text-pink-500">
-                Dinda.
-            </a>
+            <div class="h-20 flex items-center justify-between">
 
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-
+                <!-- Logo -->
                 <a href="index.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    Home
+                   class="text-xl font-bold tracking-tight text-[#2B1620]">
+                    Dinda<span class="text-pink-500">.</span>
                 </a>
 
-                <a href="about.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    About
-                </a>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-9 text-sm font-medium">
 
-                <a href="experience.html"
-                   class="text-pink-500">
-                    Experience
-                </a>
+                    <a href="index.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Home
+                    </a>
 
-                <a href="achievements.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    Achievements
-                </a>
+                    <a href="about.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        About
+                    </a>
+
+                    <a href="experience.html"
+                       class="text-pink-500">
+                        Experience
+                    </a>
+
+                    <a href="achievements.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Achievements
+                    </a>
+
+                </div>
+
+                <!-- Mobile Button -->
+                <button
+                    id="menu-button"
+                    type="button"
+                    class="md:hidden text-gray-700 text-2xl"
+                    aria-label="Open menu"
+                    aria-expanded="false">
+                    ☰
+                </button>
 
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button
-                id="menu-button"
-                class="md:hidden text-pink-500 text-2xl"
-                aria-label="Open menu">
-                ☰
-            </button>
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu"
+                 class="hidden md:hidden border-t border-gray-100 py-5">
 
-        </div>
+                <div class="flex flex-col gap-5 text-sm font-medium">
 
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu"
-             class="hidden md:hidden pt-4 pb-2">
+                    <a href="index.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Home
+                    </a>
 
-            <div class="flex flex-col gap-4 text-sm font-medium">
+                    <a href="about.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        About
+                    </a>
 
-                <a href="index.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    Home
-                </a>
+                    <a href="experience.html"
+                       class="text-pink-500">
+                        Experience
+                    </a>
 
-                <a href="about.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    About
-                </a>
+                    <a href="achievements.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Achievements
+                    </a>
 
-                <a href="experience.html"
-                   class="text-pink-500">
-                    Experience
-                </a>
-
-                <a href="achievements.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    Achievements
-                </a>
+                </div>
 
             </div>
-        </div>
 
-    </div>
-</nav>
+        </div>
+    </nav>
 
 
     <!-- Experience -->
-    <main class="pt-24 pb-20">
-        <div class="max-w-5xl mx-auto px-6">
+    <main class="pt-20">
+
+        <section class="max-w-6xl mx-auto px-6 py-20">
 
             <!-- Heading -->
-            <div class="text-center mb-16">
+            <div class="max-w-2xl mb-16">
 
-                <p class="text-pink-500 font-medium mb-3">My journey</p>
-                <h1 class="text-4xl sm:text-5xl font-bold">Experience</h1>
-                <p class="text-gray-500 max-w-2xl mx-auto mt-5 leading-8">
+                <p class="text-sm uppercase tracking-[0.25em] text-pink-500 font-semibold">
+                    My journey
+                </p>
+
+                <h1 class="text-4xl sm:text-5xl font-bold mt-4">
+                    Experience
+                </h1>
+
+                <p class="text-gray-500 leading-8 mt-5">
                     Some of my experiences in committees and event activities
                     that helped me develop teamwork, communication, and
                     organizational skills.
                 </p>
+
             </div>
 
 
             <!-- Timeline -->
-            <div class="relative max-w-3xl mx-auto">
-                <!-- Line -->
-                <div class="absolute left-2.5 top-2 bottom-2 w-px bg-pink-200">
-                </div>
+            <div class="max-w-4xl">
+
                 <!-- Experience 1 -->
-                <div class="relative flex gap-7 mb-12">
-                    <div class="relative z-10 w-5 h-5 mt-1 rounded-full bg-white border-4 border-pink-400 flex-shrink-0"></div>
-                    <div class="bg-pink-50 border border-pink-100 rounded-2xl p-6 flex-1">
-                        <p class="text-sm font-medium text-pink-500">2026</p>
-                        <h2 class="text-xl font-bold mt-2">33rd Dies Natalis of Undiksha</h2>
-                        <p class="text-pink-600 font-medium mt-1">Expo & Competition Division</p>
-                        <p class="text-gray-500 leading-7 mt-4">
-                            Participated as a committee member in the Expo and Competition Division. I was responsible for helping
-                            organize competition activities and supporting the event process.
+                <div class="grid md:grid-cols-[130px_1fr] gap-6 md:gap-10 pb-12">
+
+                    <div>
+                        <p class="text-sm font-semibold text-pink-500">
+                            2026
                         </p>
-                        <div class="flex flex-wrap gap-2 mt-5">
-                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-pink-200 text-pink-600">
-                                PIC Karaoke Competition
-                            </span>
-                            <span class="px-3 py-1 text-xs rounded-full bg-white border border-pink-200 text-pink-600">
-                                PIC Tenant
-                            </span>
-                        </div>
                     </div>
+
+                    <div class="border-l-2 border-pink-100 pl-7 relative">
+
+                        <div class="absolute -left-[7px] top-0 w-3 h-3 rounded-full bg-pink-500 ring-4 ring-pink-50">
+                        </div>
+
+                        <div class="bg-[#fafafa] border border-gray-100 rounded-2xl p-7">
+
+                            <h2 class="text-xl sm:text-2xl font-bold">
+                                33rd Dies Natalis of Undiksha
+                            </h2>
+
+                            <p class="text-pink-500 font-medium mt-2">
+                                Expo & Competition Division
+                            </p>
+
+                            <p class="text-gray-500 leading-8 mt-5">
+                                Participated as a committee member in the
+                                Expo and Competition Division. I was
+                                responsible for helping organize competition
+                                activities and supporting the event process.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-6">
+
+                                <span class="px-4 py-2 rounded-full bg-white border border-gray-200 text-xs font-medium">
+                                    PIC Karaoke Competition
+                                </span>
+
+                                <span class="px-4 py-2 rounded-full bg-white border border-gray-200 text-xs font-medium">
+                                    PIC Tenant
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
 
                 <!-- Experience 2 -->
-                <div class="relative flex gap-7 mb-12">
-                    <div class="relative z-10 w-5 h-5 mt-1 rounded-full bg-white border-4 border-pink-400 flex-shrink-0"> </div>
-                    <div class="bg-white border border-pink-100 rounded-2xl p-6 flex-1 shadow-sm">
-                        <p class="text-sm font-medium text-pink-500">2025</p>
-                        <h2 class="text-xl font-bold mt-2">PAT X INOFEST BEM FTK 25/26</h2>
-                        <p class="text-pink-600 font-medium mt-1">Secretariat Division</p>
-                        <p class="text-gray-500 leading-7 mt-4">
-                            Contributed to the Secretariat Division by preparing attendance lists for the basketball
-                            competition and invited guests, as well as managing attendance during the event.
+                <div class="grid md:grid-cols-[130px_1fr] gap-6 md:gap-10 pb-12">
+
+                    <div>
+                        <p class="text-sm font-semibold text-pink-500">
+                            2025
                         </p>
                     </div>
+
+                    <div class="border-l-2 border-pink-100 pl-7 relative">
+
+                        <div class="absolute -left-[7px] top-0 w-3 h-3 rounded-full bg-pink-400 ring-4 ring-pink-50">
+                        </div>
+
+                        <div class="border border-gray-100 rounded-2xl p-7">
+
+                            <h2 class="text-xl sm:text-2xl font-bold">
+                                PAT X INOFEST BEM FTK 25/26
+                            </h2>
+
+                            <p class="text-pink-500 font-medium mt-2">
+                                Secretariat Division
+                            </p>
+
+                            <p class="text-gray-500 leading-8 mt-5">
+                                Contributed to the Secretariat Division by
+                                preparing attendance lists for the basketball
+                                competition and invited guests, as well as
+                                managing attendance during the event.
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
 
                 <!-- Experience 3 -->
-                <div class="relative flex gap-7">
-                    <div class="relative z-10 w-5 h-5 mt-1 rounded-full bg-white border-4 border-pink-400 flex-shrink-0"></div>
-                    <div class="bg-pink-50 border border-pink-100 rounded-2xl p-6 flex-1">
-                        <p class="text-sm font-medium text-pink-500">2024</p>
-                        <h2 class="text-xl font-bold mt-2">INTEGER #6</h2>
-                        <p class="text-pink-600 font-medium mt-1">Expo Division</p>
-                        <p class="text-gray-500 leading-7 mt-4">
-                            Participated as a committee member in the Informatics Department Expo and supported the
-                            preparation and implementation of the event.
+                <div class="grid md:grid-cols-[130px_1fr] gap-6 md:gap-10">
+
+                    <div>
+                        <p class="text-sm font-semibold text-pink-500">
+                            2024
                         </p>
                     </div>
+
+                    <div class="border-l-2 border-pink-100 pl-7 relative">
+
+                        <div class="absolute -left-[7px] top-0 w-3 h-3 rounded-full bg-pink-300 ring-4 ring-pink-50">
+                        </div>
+
+                        <div class="bg-[#fafafa] border border-gray-100 rounded-2xl p-7">
+
+                            <h2 class="text-xl sm:text-2xl font-bold">
+                                INTEGER #6
+                            </h2>
+
+                            <p class="text-pink-500 font-medium mt-2">
+                                Expo Division
+                            </p>
+
+                            <p class="text-gray-500 leading-8 mt-5">
+                                Participated as a committee member in the
+                                Informatics Department Expo and supported the
+                                preparation and implementation of the event.
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
-        </div>
+
+        </section>
+
     </main>
 
+
     <!-- Footer -->
-    <footer class="border-t border-pink-100 py-6">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-sm text-gray-400">© 2026 Made Dinda Dwi Marta. All rights reserved.</p>
+    <footer class="border-t border-gray-100">
+
+        <div class="max-w-6xl mx-auto px-6 py-7">
+
+            <p class="text-center text-sm text-gray-400">
+                © 2026 Made Dinda Dwi Marta. All rights reserved.
+            </p>
+
         </div>
+
     </footer>
+
+
     <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>

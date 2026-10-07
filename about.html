@@ -6,7 +6,10 @@
 
     <title>About | Dinda</title>
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,61 +17,24 @@
 
 <body class="bg-white text-[#2B1620] font-['Plus_Jakarta_Sans']">
 
-   <!-- Navbar -->
-<!-- Navbar -->
-<nav class="fixed top-0 left-0 w-full z-50 pointer-events-auto bg-white/90 backdrop-blur-md border-b border-pink-100">
-    <div class="max-w-6xl mx-auto px-6 py-4">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
 
-        <div class="flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6">
 
-            <!-- Logo -->
-            <a href="index.html"
-               class="text-xl font-bold text-pink-500">
-                Dinda.
-            </a>
+            <div class="h-20 flex items-center justify-between">
 
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-
+                <!-- Logo -->
                 <a href="index.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    Home
+                   class="text-xl font-bold tracking-tight text-[#2B1620]">
+                    Dinda<span class="text-pink-500">.</span>
                 </a>
 
-                <a href="about.html"
-                   class="text-pink-500">
-                    About
-                </a>
-
-                <a href="experience.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    Experience
-                </a>
-
-                <a href="achievements.html"
-                   class="text-gray-500 hover:text-pink-500 transition">
-                    Achievements
-                </a>
-
-            </div>
-
-            <!-- Mobile Menu Button -->
-           <!-- Mobile Menu Button -->
-                <button
-                    id="menu-button"
-                    class="md:hidden text-pink-500 text-2xl"
-                    aria-label="Open menu">
-                    ☰
-                </button>
-            </div>
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu"
-                 class="hidden md:hidden pt-4 pb-2">
-
-                <div class="flex flex-col gap-4 text-sm font-medium">
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-9 text-sm font-medium">
 
                     <a href="index.html"
-                       class="text-grey-500 hover:text-pink-500">
+                       class="text-gray-500 hover:text-pink-500 transition">
                         Home
                     </a>
 
@@ -76,116 +42,185 @@
                        class="text-pink-500">
                         About
                     </a>
-                      <a href="experience.html"
-                       class="text-gray-500 hover:text-pink-500">
+
+                    <a href="experience.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
                         Experience
                     </a>
 
                     <a href="achievements.html"
-                       class="text-gray-500 hover:text-pink-500">
+                       class="text-gray-500 hover:text-pink-500 transition">
                         Achievements
                     </a>
-                </div>
-        </div>
 
-    </div>
-</nav>
+                </div>
+
+                <!-- Mobile Button -->
+                <button
+                    id="menu-button"
+                    type="button"
+                    class="md:hidden text-gray-700 text-2xl"
+                    aria-label="Open menu"
+                    aria-expanded="false">
+                    ☰
+                </button>
+
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu"
+                 class="hidden md:hidden border-t border-gray-100 py-5">
+
+                <div class="flex flex-col gap-5 text-sm font-medium">
+
+                    <a href="index.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Home
+                    </a>
+
+                    <a href="about.html"
+                       class="text-pink-500">
+                        About
+                    </a>
+
+                    <a href="experience.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Experience
+                    </a>
+
+                    <a href="achievements.html"
+                       class="text-gray-500 hover:text-pink-500 transition">
+                        Achievements
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
 
     <!-- About -->
-    <main class="pt-24 pb-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <!-- Heading -->
-            <div class="text-center mb-16">
+    <main class="pt-20">
 
-                <p class="text-pink-500 font-medium mb-4">
-                    GET TO KNOW
+        <section class="max-w-6xl mx-auto px-6 py-20">
+
+            <!-- Heading -->
+            <div class="max-w-2xl mb-16">
+
+                <p class="text-sm uppercase tracking-[0.25em] text-pink-500 font-semibold">
+                    Get to know me
                 </p>
 
-                <h1 class="text-4xl sm:text-5xl font-bold">
+                <h1 class="text-4xl sm:text-5xl font-bold mt-4">
                     About Me
                 </h1>
 
-                <p class="text-gray-500 max-w-2xl mx-auto mt-5 leading-8">
-                    A short introduction and personal information about me.
+                <p class="text-gray-500 leading-8 mt-5">
+                    A short introduction about my background, interests,
+                    and the things I enjoy learning.
                 </p>
 
             </div>
 
 
             <!-- Profile -->
-            <div class="bg-pink-50 border border-pink-100 rounded-2xl p-6 md:p-10">
+            <div class="grid md:grid-cols-5 gap-10 lg:gap-16 items-center">
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Photo -->
+                <div class="md:col-span-2">
 
+                    <div class="relative max-w-sm mx-auto">
 
-                    <!-- Left Side -->
-                    <div class="flex justify-center">
+                        <div class="absolute -bottom-4 -left-4 w-full h-full rounded-[2rem] bg-pink-100">
+                        </div>
 
-                        <img src="assets/dinda.jpeg"
-                             alt="Foto Dinda"
-                             class="w-56 h-64 object-cover rounded-3xl shadow-lg">
+                        <div class="relative bg-white p-3 rounded-[2rem] shadow-lg shadow-gray-200">
+
+                            <img
+                                src="assets/dinda.jpeg"
+                                alt="Dinda"
+                                class="w-full h-[420px] object-cover rounded-[1.5rem]"
+                            >
+
+                        </div>
 
                     </div>
 
-
-                    <!-- Right Side -->
-                    <div class="md:col-span-1">
-
-                        <h2 class="text-3xl font-bold text-gray-800">
-                            Made Dinda Dwi Marta
-                        </h2>
-
-                        <p class="mt-5 text-gray-600 leading-relaxed">
-                            I enjoys learning new things about technology and organizational activities. I am an active person,
-                            quick to respond, and interested in gaining new experiences.
-                        </p>
+                </div>
 
 
-                        <!-- Biodata -->
-                        <div class="mt-7 space-y-4">
+                <!-- Information -->
+                <div class="md:col-span-3">
 
-                            <div class="flex flex-col sm:flex-row">
-                                <span class="font-semibold w-40 text-gray-800">
-                                    Name
-                                </span>
+                    <p class="text-pink-500 text-sm font-semibold uppercase tracking-wider">
+                        Hello, I'm
+                    </p>
 
-                                <span>
-                                    Made Dinda Dwi Marta
-                                </span>
-                            </div>
+                    <h2 class="text-3xl font-bold mt-3">
+                        Made Dinda Dwi Marta
+                    </h2>
 
-
-                            <div class="flex flex-col sm:flex-row">
-                                <span class="font-semibold w-40 text-gray-800">
-                                    NIM
-                                </span>
-
-                                <span>
-                                    2415101054
-                                </span>
-                            </div>
+                    <p class="mt-6 text-gray-500 leading-8">
+                        I enjoy learning new things about technology and
+                        organizational activities. I am an active person,
+                        quick to respond, and interested in gaining new
+                        experiences.
+                    </p>
 
 
-                            <div class="flex flex-col sm:flex-row">
-                                <span class="font-semibold w-40 text-gray-800">
-                                    Study Program
-                                </span>
+                    <!-- Biodata -->
+                    <div class="mt-9 border-t border-gray-100">
 
-                                <span>
-                                    Computer Science
-                                </span>
-                            </div>
+                        <div class="grid sm:grid-cols-2 border-b border-gray-100 py-5">
+
+                            <span class="text-sm text-gray-400">
+                                Name
+                            </span>
+
+                            <span class="font-medium mt-1 sm:mt-0">
+                                Made Dinda Dwi Marta
+                            </span>
+
+                        </div>
 
 
-                            <div class="flex flex-col sm:flex-row">
-                                <span class="font-semibold w-40 text-gray-800">
-                                    University
-                                </span>
+                        <div class="grid sm:grid-cols-2 border-b border-gray-100 py-5">
 
-                                <span>
-                                    Ganesha University of Education
-                                </span>
-                            </div>
+                            <span class="text-sm text-gray-400">
+                                NIM
+                            </span>
+
+                            <span class="font-medium mt-1 sm:mt-0">
+                                2415101054
+                            </span>
+
+                        </div>
+
+
+                        <div class="grid sm:grid-cols-2 border-b border-gray-100 py-5">
+
+                            <span class="text-sm text-gray-400">
+                                Study Program
+                            </span>
+
+                            <span class="font-medium mt-1 sm:mt-0">
+                                Computer Science
+                            </span>
+
+                        </div>
+
+
+                        <div class="grid sm:grid-cols-2 py-5">
+
+                            <span class="text-sm text-gray-400">
+                                University
+                            </span>
+
+                            <span class="font-medium mt-1 sm:mt-0">
+                                Ganesha University of Education
+                            </span>
 
                         </div>
 
@@ -195,60 +230,90 @@
 
             </div>
 
+        </section>
 
-            <!-- Skills -->
-            <section class="mt-20">
 
-                <div class="text-center mb-10">
+        <!-- Skills -->
+        <section class="bg-[#fafafa] border-y border-gray-100">
 
-                    <h2 class="text-3xl font-bold">
-                        Skills & Interests
-                    </h2>
+            <div class="max-w-6xl mx-auto px-6 py-20">
+
+                <div class="grid md:grid-cols-3 gap-10">
+
+                    <div>
+
+                        <p class="text-sm uppercase tracking-[0.2em] text-pink-500 font-semibold">
+                            What I enjoy
+                        </p>
+
+                        <h2 class="text-3xl font-bold mt-3">
+                            Skills & Interests
+                        </h2>
+
+                    </div>
+
+
+                    <div class="md:col-span-2 flex flex-wrap gap-3 content-start">
+
+                        <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-sm">
+                            HTML
+                        </span>
+
+                        <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-sm">
+                            CSS
+                        </span>
+
+                        <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-sm">
+                            JavaScript
+                        </span>
+
+                        <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-sm">
+                            Microsoft Office
+                        </span>
+
+                        <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-sm">
+                            Canva
+                        </span>
+
+                        <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-sm">
+                            Teamwork
+                        </span>
+
+                        <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-sm">
+                            Web Development
+                        </span>
+
+                        <span class="px-5 py-2.5 rounded-full bg-white border border-gray-200 text-sm">
+                            Technology
+                        </span>
+
+                    </div>
 
                 </div>
 
+            </div>
 
-                <div class="flex flex-wrap justify-center gap-3">
+        </section>
 
-                    <span class="px-4 py-2 text-sm rounded-full bg-pink-50 border border-pink-100 text-pink-600">
-                        HTML
-                    </span>
-
-                    <span class="px-4 py-2 text-sm rounded-full bg-pink-50 border border-pink-100 text-pink-600">
-                        CSS
-                    </span>
-
-                    <span class="px-4 py-2 text-sm rounded-full bg-pink-50 border border-pink-100 text-pink-600">
-                        JavaScript
-                    </span>
-
-                    <span class="px-4 py-2 text-sm rounded-full bg-pink-50 border border-pink-100 text-pink-600">
-                        Microsoft Office
-                    </span>
-
-                    <span class="px-4 py-2 text-sm rounded-full bg-pink-50 border border-pink-100 text-pink-600">
-                        Canva
-                    </span>
-
-                    <span class="px-4 py-2 text-sm rounded-full bg-pink-50 border border-pink-100 text-pink-600">
-                        Teamwork
-                    </span>
-                </div>
-            </section>
-        </div>
     </main>
 
 
     <!-- Footer -->
-    <footer class="border-t border-pink-100 py-6">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-sm text-gray-400">© 2026 Made Dinda Dwi Marta. All rights reserved.</p>
+    <footer class="border-t border-gray-100">
+
+        <div class="max-w-6xl mx-auto px-6 py-7">
+
+            <p class="text-center text-sm text-gray-400">
+                © 2026 Made Dinda Dwi Marta. All rights reserved.
+            </p>
+
         </div>
+
     </footer>
+
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-
 
 </body>
 </html>
